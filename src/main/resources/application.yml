@@ -1,0 +1,14 @@
+spring: 
+  application:
+    name: techefx.zuulapigatewayservice
+  devtools:
+    restart:
+      enabled: true
+
+server:
+  port: ${port:8765} 
+
+zuul:
+ routes:
+   product-enquery: /product-enquery/**
+   url: http://localhost:8700/ 
